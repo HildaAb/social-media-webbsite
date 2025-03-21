@@ -6,7 +6,7 @@
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
   --color-danger: hsl(0, 95%, 65%);
-  --color-dark: hsl(252, 30%, 17%);
+  --color-dark: hsl(255, 22%, 40%);
   --color-black: hsl(252, 30%, 10%);
 
   --border-radius: 2rem;
@@ -166,6 +166,10 @@ main .container .left .profile {
   position: relative;
 }
 
+.notification-color {
+  color: red;
+}
+
 .left .sidebar .menu-item:hover {
   background: var(--color-light);
 }
@@ -183,15 +187,24 @@ main .container .left .profile {
   font-size: 0.7rem;
   width: fit-content;
   border-radius: 0.8rem;
-  padding: 0.1rem 0.4rem;
+  padding: 0.1rem 0.2rem;
   position: absolute;
   top: -0.2rem;
-  right: -0.3rem;
+  right: -0.9rem;
+}
+
+.left .sidebar i .notification-count.messages {
+  right: 0.4rem;
 }
 
 .left .sidebar h3 {
   margin-left: 1.5rem;
   font-size: 1rem;
+  color: var(--color-dark);
+}
+
+.left .sidebar .menu-item.messages h3 {
+  margin-left: 0.1rem;
 }
 
 .left .sidebar .active {
