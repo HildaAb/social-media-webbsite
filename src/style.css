@@ -606,6 +606,7 @@ main .container .right .profile-photo-icon {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 1rem rgb(90, 62, 103);
 }
 
 .customize-theme .font-size {
@@ -763,6 +764,10 @@ main .container .right .profile-photo-icon {
   .left .btn {
     display: none;
   }
+
+  .customize-theme .card {
+    width: 80vw;
+  }
 }
 
 /* @media mobile*/
@@ -803,5 +808,9 @@ main .container .right .profile-photo-icon {
 
   main .container .right {
     display: none;
+  }
+
+  .customize-theme .card {
+    width: 92vw;
   }
 }
