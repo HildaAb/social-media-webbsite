@@ -42,7 +42,6 @@ menuItems.forEach((item) => {
 //messages Fundera,borde fungera
 messagesNotification.addEventListener("click", () => {
   messages.style.boxShadow = "0 0 1rem var(--color-primary)";
-  messages.style.backgroundColor = "green";
 
   const messagesNotification = document.querySelector(".notification-count");
   messagesNotification.style.display = "none";

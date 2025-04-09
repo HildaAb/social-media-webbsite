@@ -193,8 +193,8 @@ main .container .left .profile {
   right: -0.9rem;
 }
 
-.left .sidebar i .notification-count.messages {
-  right: 0.4rem;
+.left .sidebar i .notification-count.message-a {
+  right: 0.6rem;
 }
 
 .left .sidebar h3 {
@@ -205,6 +205,13 @@ main .container .left .profile {
 
 .left .sidebar .menu-item.messages h3 {
   margin-left: 0.1rem;
+}
+
+.left .message-b {
+}
+
+.left .message-c {
+  margin-left: -1.5rem;
 }
 
 .left .sidebar .active {
