@@ -39,7 +39,7 @@ menuItems.forEach((item) => {
   });
 });
 
-//messageSearch
+//messageSearch  FUNDERA
 
 const searchMessage = () => {
   let val = messageSearch.value.toLowerCase();
@@ -122,9 +122,17 @@ fontSizes.forEach((size) => {
 });
 
 //colors
+
+const changeActiveColorClass = () => {
+  colorPalette.forEach((colorPicker) => {
+    colorPicker.classList.remove("active");
+  });
+};
+
 colorPalette.forEach((color) => {
   color.addEventListener("click", () => {
     let primary;
+    changeActiveColorClass();
 
     if (color.classList.contains("color-1")) {
       primaryHue = 252;
@@ -137,7 +145,7 @@ colorPalette.forEach((color) => {
     } else if (color.classList.contains("color-5")) {
       primaryHue = 202;
     }
-
+    color.classList.add("active");
     root.style.setProperty("--primary-color-hue", primaryHue);
   });
 });
