@@ -39,7 +39,23 @@ menuItems.forEach((item) => {
   });
 });
 
-//messages Fundera,borde fungera
+//messageSearch
+
+const searchMessage = () => {
+  let val = messageSearch.value.toLowerCase();
+  message.forEach((chat) => {
+    let name = chat.querySelectorAll("h5").textContent;
+    if (name.indexOf(val) != -1) {
+      chat.style.display = "flex";
+    } else {
+      chat.style.display = "none";
+    }
+  });
+};
+
+messageSearch.addEventListener("keyup", searchMessage);
+
+//message card
 messagesNotification.addEventListener("click", () => {
   messages.style.boxShadow = "0 0 1rem var(--color-primary)";
 
@@ -49,22 +65,6 @@ messagesNotification.addEventListener("click", () => {
     messages.style.boxShadow = "none";
   }, 2000);
 });
-
-//messageSearch (right). fundera varför det inte fungerar
-
-const searchMessage = () => {
-  const val = messageSearch.value;
-  message.forEach((user) => {
-    const userName = user.querySelector("h5");
-    if (userName.indexOf(val) != -1) {
-      user.style.display = "flex";
-    } else {
-      user.style.display = "none";
-    }
-  });
-};
-
-messageSearch - addEventListener("keyup", searchMessage);
 
 //theme
 
@@ -85,7 +85,7 @@ theme.addEventListener("click", openThemeModal);
 
 const removeSizeSelector = () => {
   fontSizes.forEach((size) => {
-    size.classList.remove("acitve");
+    size.classList.remove("active");
   });
 };
 
@@ -96,28 +96,28 @@ fontSizes.forEach((size) => {
     let fontSize;
     size.classList.toggle("active");
 
-    if (size.classList.containes("font-size-1")) {
+    if (size.classList.contains("font-size-1")) {
       fontSize = "10px";
       root.style.setProperty("----sticky-top-left", "5.4rem");
       root.style.setProperty("----sticky-top-right", "5.4rem");
-    } else if (size.classList.containes("font-size-2")) {
+    } else if (size.classList.contains("font-size-2")) {
       fontSize = "13px";
       root.style.setProperty("----sticky-top-left", "5.4rem");
       root.style.setProperty("----sticky-top-right", "-7rem");
-    } else if (size.classList.containes("font-size-3")) {
+    } else if (size.classList.contains("font-size-3")) {
       fontSize = "16px";
       root.style.setProperty("----sticky-top-left", "-2rem");
       root.style.setProperty("----sticky-top-right", "-17rem");
-    } else if (size.classList.containes("font-size-4")) {
+    } else if (size.classList.contains("font-size-4")) {
       fontSize = "19px";
       root.style.setProperty("----sticky-top-left", "-5rem");
       root.style.setProperty("----sticky-top-right", "-25rem");
-    } else if (size.classList.containes("font-size-5")) {
+    } else if (size.classList.contains("font-size-5")) {
       fontSize = "22px";
       root.style.setProperty("----sticky-top-left", "-12rem");
       root.style.setProperty("----sticky-top-right", "-35rem");
     }
-    document.querySelector("html").style.fontSIze = fontSize;
+    document.querySelector("html").style.fontSize = fontSize;
   });
 });
 
