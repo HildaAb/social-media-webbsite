@@ -2,7 +2,7 @@
 const menuItems = document.querySelectorAll(".menu-item");
 const popup = document.querySelector("#notifications-popup");
 
-const messagesNotification = document.querySelector("#messages-notifications");
+const messagesNotification = document.querySelector("#messages-notification");
 
 const messages = document.querySelector(".messages");
 const message = document.querySelectorAll(".message");
@@ -41,14 +41,14 @@ menuItems.forEach((item) => {
 
 //messages Fundera,borde fungera
 messagesNotification.addEventListener("click", () => {
-  messages.style.color = red;
+  messages.style.boxShadow = "0 0 1rem var(--color-primary)";
   messages.style.backgroundColor = "green";
 
-  const messageNotification = document.querySelector(".notification-count");
-  messageNotification.style.display = "none";
+  const messagesNotification = document.querySelector(".notification-count");
+  messagesNotification.style.display = "none";
   setTimeout(() => {
-    message.style.boxShadow = "none";
-  }, 5000);
+    messages.style.boxShadow = "none";
+  }, 2000);
 });
 
 //messageSearch (right). fundera varför det inte fungerar

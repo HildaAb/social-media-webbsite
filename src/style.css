@@ -506,7 +506,7 @@ main .container .right .profile-photo-icon {
 
 .right .messages .message h5 {
   align-items: center;
-  margin-top: 0.5rem;
+  margin-top: -0.5rem;
   margin-bottom: -0.1rem;
 }
 
@@ -516,14 +516,14 @@ main .container .right .profile-photo-icon {
 
 .right .message .profile-photo {
   position: relative;
-  overflow: visible;
+  overflow: none;
 }
 
 .right .message .profile-photo-b {
   border-radius: 50%;
 }
 
-.right .messages .message .profile-photo .active {
+.right .messages .message .profile-photo.active {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
@@ -534,7 +534,7 @@ main .container .right .profile-photo-icon {
   left: 1.2rem;
 }
 
-.right .messages .category .active {
+.right .messages .category.active {
   border-color: var(--color-dark);
 }
 
@@ -549,7 +549,7 @@ main .container .right .profile-photo-icon {
   align-items: start;
 }
 
-.right .messages .message :last-child {
+.right .messages .message:last-child {
   margin: 0;
 }
 
